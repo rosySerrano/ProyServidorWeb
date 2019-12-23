@@ -5,11 +5,11 @@
         <title>Registro</title>
     </head>
     <body>
-        <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
+        <form action="./guardarRegistro.php" method="post">
             <p>
-                Nombre Completo: <input type="text" name="name_control" autofocus required />
+                Nombre Completo: <input type="text" name="name_control"  autofocus required />
                 <br />
-                Nombre usuario: <input type="text" name="userName_control" maxlength="15" required />
+                Nombre usuario: <input type="text" name="userName_control"  maxlength="15" required />
                 <br />
                 Contraseña: <input type="text" pattern="(?=.*\d)(?=.*[a-z]).{8}" name="password_control" 
                                    maxlength="8" title="Debe contener al menos un numero, una letra y la longitud de 8 caracteres" required/>
