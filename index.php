@@ -10,6 +10,7 @@ and open the template in the editor.
         <title>Descarga Libros PDF</title>
     </head>
     <body>
+        Inicio
         <?php
         // put your code here
         ?>
