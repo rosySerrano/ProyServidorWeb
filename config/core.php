@@ -9,6 +9,9 @@ $page_inicio = "index.php";
 //Pagina de inicio de sesión
 $page_login = "login.php";
 
+//Pagina de cierre de sesión
+$page_logout = "logout.php";
+
 //Pagina de registro
 $page_registro = "registro.php";
 
