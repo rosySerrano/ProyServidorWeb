@@ -14,12 +14,11 @@
         <!-- Bootstrap CSS -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" media="screen" />
 
-        <!-- CSS personalizado -->
-        <link href="<?php echo $home_url . "libs/css/customer.css" ?>" rel="stylesheet" />
-
     </head>
     <body>
-
+        <div class="page-header">
+             <h1> <img src="./recursos/libros.jpg" class="img-rounded"  width="50" height="50"> Libros Al Bolsillo</h1>
+        </div>
         <!-- incluimos la barra de navegacion -->
         <?php include_once 'navigation.php'; ?>
 
@@ -28,11 +27,11 @@
 
             <?php
             // si el título de la página dado es 'Iniciar sesión', no muestre el título
-            if ($page_title != "Iniciar sesión") {
+            if ($page_title == "Registro") {
                 ?>
                 <div class='col-md-12'>
                     <div class="page-header">
-                        <h1><?php echo isset($page_title) ? $page_title : "Descarga Libros Online"; ?></h1>
+                        <h1><?php echo isset($page_title) ? $page_title : ""; ?></h1>
                     </div>
                 </div>
                 <?php
