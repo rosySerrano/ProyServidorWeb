@@ -21,10 +21,10 @@ if ($_POST) {
     $userName = filter_input(INPUT_POST, "userName_control");
     $password = filter_input(INPUT_POST, "password_control");
     $email = filter_input(INPUT_POST, "email_control");
-    $rol = "lector";
+    $rol = "Lector";
 
     //Generamos una cadena con los datos del formulario seperados por coma y al final de cada registro un punto y coma
-    $dato = $nombre . "," . $userName . "," . $password . "," . $email .  "," . $rol . ";";
+    $dato = $email .  "," . $nombre . "," . $userName . "," . $password . "," . $rol . "\n";
 
     //Abrimos el archivo de registros para guardar el registro
     $fileUsuarios = fopen($path, "a");
