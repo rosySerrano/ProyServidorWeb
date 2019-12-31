@@ -50,54 +50,33 @@ if ($_POST) {
                 Acceso denegado.<br /><br />
                 Su nombre de usuario o contraseña pueden ser incorrectos </div>";
     } else {
+        
         switch (trim($usuario[4])) {
-            case "Admin" :
-                header("Location: {$home_url}admin/index.php?action=login_success");
+            case "Admin" : echo 'Administrador';
+                header("Location: {$home_url}$page_admin?action=login_success");
                 break;
-            case "Gestor": header("Location: {$home_url}admin/index.php?action=login_success");
+            case "Gestor": header("Location: {$home_url}$page_gestor?action=login_success");
                 break;
             case "Lector":
-                header("Location: {$home_url}/index.php?action=login_success");
+                header("Location: {$home_url}index.php?action=login_success");
                 break;
         }
     }
-    //Obtenemos 
-//    // verifica si el correo electrónico y la contraseña están en la base de datos
-//    $user->email = $_POST['email'];
-//
-//    // comprueba si existe un correo electrónico, también obtén detalles del usuario utilizando este comando
-//    $email_exists = $user->emailExists();
-//
-//    // validacion de inicio de sesión
-//    if ($email_exists && password_verify($_POST['password'], $user->password) && $user->status == 1) {
-//
-//        // si es correcto, establece el valor de la sesión en verdadero
-//        
-//        $_SESSION['user_id'] = $user->id;
-//        $_SESSION['access_level'] = $user->access_level;
-//        $_SESSION['firstname'] = htmlspecialchars($user->firstname, ENT_QUOTES, 'UTF-8');
-//        $_SESSION['lastname'] = $user->lastname;
-//
-//        // si el nivel de acceso es 'Admin', redirija a la sección de administrador
-//        if ($user->access_level == 'Admin') {
-//            header("Location: {$home_url}admin/index.php?action=login_success");
-//        }
-//
-//        // de lo contrario, redirija solo a la sección 'Cliente'
-//        else {
-//            header("Location: {$home_url}index.php?action=login_success");
-//        }
-//    }
-//
-//// si el nombre de usuario no existe o la contraseña es incorrecta
-//    else {
-//        $access_denied = true;
-//    }
 }
 
 // incluimos el HTML de encabezado de página
 include_once "layout_head.php";
 
+// obtenemos el valor de 'acciÃ³n' en el parÃ¡metro url para mostrar los mensajes de solicitud correspondientes
+$action=isset($_GET['action']) ? $_GET['action'] : "";
+
+// le decimos al usuario que aÃºn no ha iniciado sesiÃ³n
+if ($action=='please_login'){
+echo "<div class='alert alert-info'>
+  <strong>Por favor inicie sesión.</strong>
+</div><br/>";
+
+}
 echo "<div class='col-sm-6 col-md-4 col-md-offset-4'>";
 
 // formulario de inicio de sesión HTML real
