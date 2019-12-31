@@ -20,7 +20,7 @@ echo "<div class='col-md-12'>";
 	// si el inicio de sesión fue exitoso
 	if($action=='login_success'){
 		echo "<div class='alert alert-info'>";
-			echo "<strong>Hi " . $_SESSION['firstname'] . ", welcome back!</strong>";
+			echo "<strong>Hola " . $_SESSION['user_name'] . "</strong>";
 		echo "</div>";
 	}
 
