@@ -32,11 +32,23 @@ echo "<div class='col-md-12'>";
 	}
 
 	// contenido una vez conectado
-	echo "<div class='alert alert-info'>";
-		echo "Content when logged in will be here. For example, your premium products or services.";
-	echo "</div>";
-
-echo "</div>";
+	echo "
+            <div class = 'container'>
+            <h2>Categorías</h2>
+            <table class = 'table'>
+                <tbody>
+                    <tr><td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Salud </a></td>
+                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Tecnología</a></td>
+                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Novela</a></td>
+                    </tr>
+                    <tr>
+                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Filosofía</a></td>
+                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Hogar</a></td>
+                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Contabiidad y Finanzas</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> ";
 
 // pie de página códigos HTML y JavaScript
 include 'layout_foot.php';
