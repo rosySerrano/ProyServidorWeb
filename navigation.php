@@ -21,7 +21,7 @@ $namePage = array_pop($urlPage);
             <?php
             // comprueba si los usuarios / clientes iniciaron sesión
 // si el usuario inició sesión, muestre las opciones "Editar perfil" y "Cerrar sesión"
-            if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true && trim($_SESSION['access_level']) == 'Lector') {
+            if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
                 
 
                 ?>
