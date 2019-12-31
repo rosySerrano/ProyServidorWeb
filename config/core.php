@@ -6,6 +6,15 @@ error_reporting(E_ALL);
 //Pagina de inicio
 $page_inicio = "index.php";
 
+//Pagina de categorias
+$page_categorias = "categorias.php";
+
+//Pagina de categorias
+$page_admin = "admin.php";
+
+//Pagina de categorias
+$page_gestor = "gestor.php";
+
 //Pagina de inicio de sesión
 $page_login = "login.php";
 
