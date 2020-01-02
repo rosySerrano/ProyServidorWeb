@@ -65,7 +65,7 @@ echo
                     <label class='control-label col-sm-2' for='password_control'> Contraseña: </label>
                     <div class='col-sm-5'>
                         <input type='text' pattern='(?=.*\d)(?=.*[a-z]).{8}' name='password_control'  class='form-control' placeholder='Ingresa contraseña'
-                               maxlength='8' title='Debe contener al menos un numero, una letra y la longitud de 8 caracteres' required/>
+                               maxlength='8' title='Debe contener al menos un numero, una letra en minúscula y la longitud de 8 caracteres' required/>
                     </div>
                 </div>
                 <div class='form-group'>
