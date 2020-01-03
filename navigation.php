@@ -23,7 +23,6 @@ $namePage = array_pop($urlPage);
 // si el usuario inició sesión, muestre las opciones "Editar perfil" y "Cerrar sesión"
             if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true) {
                 
-
                 ?>
                 <ul class="nav navbar-nav navbar-right">                   
                     <li <?php echo $namePage == $page_login ? "class='active'" : ""; ?>>
