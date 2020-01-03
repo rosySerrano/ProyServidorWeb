@@ -4,7 +4,7 @@
 include_once "config/core.php";
 
 // establecemos el título de la página
-$page_title = "Gestión de Contenido";
+$page_title = "Categorías";
 
 // se incluye el verificador de inicio de sesión
 $require_login = true;
