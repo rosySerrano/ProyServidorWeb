@@ -13,7 +13,7 @@ include_once "login_checker.php";
 // incluimos el HTML de encabezado de página
 include_once "layout_head.php";
 
-function guardarRegistro($path,$home_url,$page_inicio){
+function guardarRegistro($path,$home_url,$page_login){
     // Variables para cada campo del formulario de registro
     $nombre = filter_input(INPUT_POST, "name_control");
     $userName = filter_input(INPUT_POST, "userName_control");
@@ -34,7 +34,7 @@ function guardarRegistro($path,$home_url,$page_inicio){
         echo "<br/><div class='alert alert-danger' role='alert'>El registro no se realizo. Trate de nuevo por favor.</div>";
     } else {
         echo "<br/><div class='alert alert-success'>";
-        echo "Registro exitoso. <a href='{$home_url}{$page_inicio}'>Inicia sesión</a>.";
+        echo "Registro exitoso. <a href='{$home_url}{$page_login}'>Inicia sesión</a>.";
         echo "</div>";
 
         $nombre = "";
@@ -46,7 +46,7 @@ function guardarRegistro($path,$home_url,$page_inicio){
 //Si se selecciono la opción Registrar 
 if ($_POST) {
 
-    guardarRegistro($path,$home_url,$page_inicio);
+    guardarRegistro($path,$home_url,$page_login);
 }
 echo
 "
