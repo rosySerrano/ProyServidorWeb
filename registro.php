@@ -13,9 +13,7 @@ include_once "login_checker.php";
 // incluimos el HTML de encabezado de página
 include_once "layout_head.php";
 
-//Si se selecciono la opción Registrar 
-if ($_POST) {
-
+function guardarRegistro($path,$home_url,$page_inicio){
     // Variables para cada campo del formulario de registro
     $nombre = filter_input(INPUT_POST, "name_control");
     $userName = filter_input(INPUT_POST, "userName_control");
@@ -44,6 +42,11 @@ if ($_POST) {
         $password = "";
         $email = "";
     }
+}
+//Si se selecciono la opción Registrar 
+if ($_POST) {
+
+    guardarRegistro($path,$home_url,$page_inicio);
 }
 echo
 "
