@@ -1,1 +1,3 @@
-efef,efef,rs1234ww,fefe@gmail.com;
+admin@gmail.com,Administrador,admin,admin123,Admin
+gestor@gmail.com,Gestor,gestor,gestor12,Gestor
+rosysepulveda@gmail.com,Rosa Sepulveda,rosySepulveda,rs123456,Lector
