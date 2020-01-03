@@ -12,6 +12,14 @@ include_once "login_checker.php";
 // incluimos HTML de encabezado de página
 include_once 'layout_head.php';
 
+$arrayCategorias = array(
+                        array('Salud','Tecnología','Novela'),
+                        array('Filosofía','Hogar','Contabilidad y Finanzas'));
+
+function categorias($home_url, $page_categorias, $categoria){
+   
+   return "<a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span>" . $categoria . "</a>";
+}
 echo "<div class='col-md-12'>";
 
 	// evitamos aviso de índices indefinidos
@@ -36,17 +44,16 @@ echo "<div class='col-md-12'>";
             <div class = 'container'>
             <h2>Categorías</h2>
             <table class = 'table'>
-                <tbody>
-                    <tr><td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Salud </a></td>
-                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Tecnología</a></td>
-                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Novela</a></td>
-                    </tr>
-                    <tr>
-                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Filosofía</a></td>
-                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Hogar</a></td>
-                        <td><a href=".$home_url . $page_categorias."><span class='glyphicon glyphicon-star-empty'></span> Contabiidad y Finanzas</a></td>
-                    </tr>
-                </tbody>
+                <tbody>";
+                    $niveles = 0;
+                    do {
+                    echo "<tr>";
+                        for ($i=0; $i<3; $i++){
+                           echo "<td>" . categorias($home_url,$page_categorias, $arrayCategorias[$niveles][$i]) . "</td>";
+                        };
+                    echo "</tr>";
+                    }while(++$niveles < count($arrayCategorias));
+                echo "</tbody>
             </table>
         </div> ";
 
