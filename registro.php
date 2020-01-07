@@ -17,7 +17,7 @@ function guardarRegistro($path,$home_url,$page_login){
     // Variables para cada campo del formulario de registro
     $nombre = filter_input(INPUT_POST, "name_control");
     $userName = filter_input(INPUT_POST, "userName_control");
-    $password = filter_input(INPUT_POST, "password_control");
+    $password = sha1(filter_input(INPUT_POST, "password_control"));
     $email = filter_input(INPUT_POST, "email_control");
     $rol = "Lector";
 
@@ -67,7 +67,7 @@ echo
                 <div class='form-group'>
                     <label class='control-label col-sm-2' for='password_control'> Contraseña: </label>
                     <div class='col-sm-5'>
-                        <input type='text' pattern='(?=.*\d)(?=.*[a-z]).{8}' name='password_control'  class='form-control' placeholder='Ingresa contraseña'
+                        <input type='password' pattern='(?=.*\d)(?=.*[a-z]).{8}' name='password_control'  class='form-control' placeholder='Ingresa contraseña'
                                maxlength='8' title='Debe contener al menos un numero, una letra en minúscula y la longitud de 8 caracteres' required/>
                     </div>
                 </div>

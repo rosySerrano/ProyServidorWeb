@@ -15,7 +15,7 @@ if ($_POST) {
 
     $access_denied = true;
 
-    $password = filter_input(INPUT_POST, "password");
+    $password = sha1(filter_input(INPUT_POST, "password"));
     $email = filter_input(INPUT_POST, "email");
 
     //Verificamos que exista el archivo de usuarios para buscar el registro
@@ -71,11 +71,11 @@ include_once "layout_head.php";
 $action=isset($_GET['action']) ? $_GET['action'] : "";
 
 // le decimos al usuario que aÃºn no ha iniciado sesiÃ³n
-if ($action=='please_login'){
+while ($action=='please_login'){
 echo "<div class='alert alert-info'>
   <strong>Por favor inicie sesión.</strong>
 </div><br/>";
-
+$action = "";
 }
 echo "<div class='col-sm-6 col-md-4 col-md-offset-4'>";
 
